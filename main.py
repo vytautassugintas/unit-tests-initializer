@@ -1,23 +1,12 @@
-FUNCTION = "function"
-FUNCTION_ARROW = "=>"
-BLOCK = "{}"
-BLOCK_START = "{"
-BLOCK_END = "}"
-BRACKETS = "()"
-BRACKET_START = "("
-BRACKET_END = ")"
-MOCK = "mock"
-JASMINE_DESCRIBE = "describe"
-JASMINE_IT = "it"
-JASMINE_SPY = "jasmine.createSpy"
+import definitions as js
 
 
 def create_describe(content):
-    return JASMINE_DESCRIBE + BRACKET_START + content + "\n" + BRACKET_END
+    return js.JASMINE_DESCRIBE + js.BRACKET_START + content + "\n" + js.BRACKET_END
 
 
 def create_spy(spy_name):
-    return JASMINE_SPY + BRACKET_START + spy_name + BRACKET_END
+    return js.JASMINE_SPY + js.BRACKET_START + spy_name + js.BRACKET_END
 
 
 def read_file(path):
@@ -32,6 +21,6 @@ def read_file(path):
 
 
 def find_functions(content):
-    return content.find(FUNCTION) != -1
+    return content.find(js.FUNCTION) != -1
 
 read_file("./random.js")
