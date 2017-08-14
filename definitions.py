@@ -1,3 +1,5 @@
+LET = "let"
+CONST = "const"
 FUNCTION = "function"
 FUNCTION_ARROW = "=>"
 BLOCK = "{}"
